@@ -107,7 +107,7 @@ if 'apnic' in args.ipv4_list:
               line = line.split("|")
               a = "%s/%d" % (line[3], 32 - math.log(int(line[4]), 2), )
               a = IPv4Network(a)
-              s ubtract_cidr(root, (a,))
+              subtract_cidr(root, (a,))
 
           elif "apnic|CN|ipv6|" in line:
               line = line.split("|")
